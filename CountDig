@@ -1,0 +1,11 @@
+namespace CountDig
+{
+  int nbDig(int n, int d)
+  {
+    std::string digits;
+    for (int k = 0; k <= n; ++k)
+      digits += std::to_string(k * k);
+  
+    return std::count(digits.begin(), digits.end(), std::to_string(d)[0]);
+  }
+}
