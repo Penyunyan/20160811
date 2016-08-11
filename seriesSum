@@ -1,0 +1,15 @@
+std::string seriesSum(int n){//n作为输入，获得的数字为1/4,1/7,1/10......并将这些分数转换成小数
+     if (!n) return "0.00";
+     double sum = 0.00;
+     int i = 1;
+     while (n--)
+     {
+        sum += 1.0/(3*i-2); //将所有的分数求和
+        i++;
+     }
+     char buffer[10];
+     sprintf(buffer,"%.2f", sum);
+     std::string res = buffer;
+     return res;
+     
+}
